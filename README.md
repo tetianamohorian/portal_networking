@@ -41,7 +41,7 @@ A modern and dark-themed React-based web portal for students of the *Computer Ne
 ## 🚀 How to Run Locally
 
 ```bash
-git clone https://github.com/tetianamohorian/portal_networking.git
+git clone https://github.com/tetiana/portal_networking.git
 cd portal_networking
 npm install
 npm run dev
@@ -57,9 +57,16 @@ Then open `http://localhost:5173` in your browser.
 - Routing and navigation with React Router
 - Hosting static sites on Netlify
 
-## 📸 Screenshot
+## 📸 Screenshots
 
+### Homepage
 ![Homepage](./preview.png)
+
+### Materials Archive Page
+![Works Page](./works-preview.png)
+
+### Telegram Bot Guide
+![Bot Guide](./bot-guide-preview.png)
 
 ## 📚 License
 
@@ -67,4 +74,4 @@ This project is open-source and available under the MIT License.
 
 ## 👨‍💻 Author
 
-Made with 💡 by [Your Name] — React developer and CS student at TUKE.
+Made with 💡 by [Tetiana] — React developer and CS student at TUKE.
