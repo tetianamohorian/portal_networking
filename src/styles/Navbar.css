@@ -1,0 +1,150 @@
+.navbar {
+  background-color: #0d0f13;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* разделитель */
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.75px;
+}
+
+
+.navbar-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  line-height: 1;
+}
+
+.navbar-links a:hover {
+  color: #61dafb;
+}
+
+.navbar-links a.active {
+  font-weight: 600;
+}
+
+
+a {
+  color: #fff;
+  transition: filter 0.2s ease, color 0.2s ease;
+}
+
+a:hover {
+  color: #3b82f6;
+  filter: brightness(1.3) blur(0.3px);
+}
+
+
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.burger-icon-wrapper {
+  display: none;
+  width: 42px;
+  height: 42px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.burger-icon {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .burger-icon-wrapper 
+  {
+    display: flex;
+    background-color: #1b1d21; 
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.4);
+  }
+
+  .burger-icon-wrapper {
+  margin-left: -0.5rem; 
+}
+
+
+  @keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.burger-icon-wrapper {
+  animation: fadeSlideIn 0.4s ease-out forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+  
+
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background-color: #0d0f13;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100vw; 
+    padding: 1rem 2rem;
+    gap: 1.2rem;
+
+    z-index: 998;
+    
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+
+  }
+
+  .navbar-links a {
+    padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  
+
+
+  .navbar-links.open {
+    display: flex;
+
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+
+  }
+}

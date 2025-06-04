@@ -1,0 +1,215 @@
+.hero {
+  padding: 140px 2rem 40px;
+}
+.hero h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 1rem;
+  max-width: 820px;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: #a3a3a3;
+  margin: 0 0 7rem;
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between; 
+  
+}
+
+.card {
+  flex: 1;                      
+  min-width: 280px;   
+  max-height: 220px;           
+  padding: 2.5rem; 
+  background-color: #0d0f13;
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card-icon {
+  font-size: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.card h3 {
+  font-size: 1.5rem; /* Было 1.35rem */
+  margin-bottom: 0.75rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 1.1rem; /* Было 1.05rem */
+  color: #bbb;
+  line-height: 1.65;
+}
+
+
+.card-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background-color: #1b1d21; 
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0; 
+}
+
+.card-icon-fa {
+  font-size: 2.25rem; /* Было 1.75rem */
+  color: #ffffff;
+  opacity: 0.95;
+}
+
+
+@keyframes slideInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Заголовок */
+.hero h1 {
+  opacity: 0;
+  animation: slideInTop 0.6s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* Подзаголовок */
+.hero p {
+  opacity: 0;
+  animation: slideInTop 0.6s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+/* Навбар-ссылки */
+.navbar a {
+  opacity: 0;
+  animation: slideInTop 0.6s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+.card-icon-wrapper {
+  opacity: 0;
+  animation: slideInTop 0.6s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+.card:nth-child(1) .card-icon-wrapper {
+  animation-delay: 0.6s;
+}
+.card:nth-child(2) .card-icon-wrapper {
+  animation-delay: 0.8s;
+}
+.card:nth-child(3) .card-icon-wrapper {
+  animation-delay: 1s;
+}
+
+.card h3,
+.card p {
+  opacity: 0;
+  animation: slideInTop 0.6s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 1rem 30px;
+    min-height: 100vh;
+    text-align: center;
+  }
+
+  .card-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 90%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-icon-wrapper {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-icon-fa {
+    font-size: 2rem;
+  }
+
+  .card h3 {
+    font-size: 1.3rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 550px) {
+  .hero {
+    padding: 80px 1rem 20px;
+    text-align: center;
+  }
+
+  .card {
+    margin-left: -15px;
+    max-width: 95%;
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .card-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+  }
+
+  .card-icon-fa {
+    font-size: 1.75rem;
+  }
+
+  .card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
